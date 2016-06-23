@@ -1,0 +1,368 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="StyleSheet" href="style.css" type="text/css" media="all" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning to Poke by Poking</title> 
+<style type="text/css">
+#primarycontent h1 {
+	font-variant: small-caps;
+}
+#primarycontent h3 {
+}
+#primarycontent teasertext {
+	text-align: center;
+}
+#primarycontent p {
+	text-align: center;
+}
+#primarycontent {
+	text-align: justify;
+}
+#primarycontent p {
+	text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#primarycontent p iframe {
+	text-align: center;
+}
+.featart {
+  margin:4px;
+}
+.hoverdiv {
+  background-color:black;
+  margin-top:2px;
+  margin-bottom:10px;
+  width:100%;
+}
+.hoverdiv:hover {
+  background-color:white;
+}
+</style>
+
+<script type="text/javascript">
+  function togglevis(elid){
+    el=document.getElementById(elid);
+    aelid=elid+"a";
+    ael=document.getElementById(aelid);
+    if(el.style.display=='none'){
+      el.style.display='inline-table';
+      ael.innerHTML="[Hide BibTex]";
+    }else{
+      el.style.display='none';
+      ael.innerHTML="[Show BibTex]";
+    }
+  }
+</script>
+</head> 
+<body itemscope itemtype="http://schema.org/ScholarlyArticle"> 
+<div id="primarycontent"> 
+<p class="hiddenDiv" itemprop="url"></p>
+<h1 align="center" itemprop="name"><strong>Unsupervised Visual Representation Learning <br/> by Context Prediction</strong></h1>
+<img src="images/teaser.jpg" itemprop="image" width="800" alt="teaserImage">
+<p style="text-align:center;margin-bottom:-15px;font-size:1em;font-weight:bold;">Presented at <a href="http://pamitc.org/iccv15/program.php"  target="_blank">ICCV 2015</a></p>
+<h3>People</h3>
+
+<ul id="people" itemprop="accountablePerson">
+<li><a href="">Pulkit Agrawal</a></li>
+<li><a href="">Ashvin Nair</a></li>
+<li><a href="">Jitendra Malik</a></li>
+<li><a href="">Pieter Abbeel</a></li>
+<li><a href="">Sergey Levine</a></li>
+</ul>
+<h3>Abstract</h3>
+
+
+<p style="padding-left: 10px;	padding-right: 10px;">
+This work explores the use of spatial context as a source of free 
+and plentiful supervisory signal for training a rich visual 
+representation. Given only a large, unlabeled image collection, 
+we extract random pairs of patches from each image and train a 
+convolutional neural net to predict the position of the second patch 
+relative to the first. We argue that doing well on this task requires 
+the model to learn to recognize objects and their parts. We demonstrate 
+that the feature representation learned using this within-image context 
+indeed captures visual similarity across images. For example, this 
+representation allows us to perform unsupervised visual discovery of objects 
+like cats, people, and even birds from the Pascal VOC 2011 detection dataset. 
+Furthermore, we show that the learned ConvNet can be used in the <a href="http://arxiv.org/abs/1311.2524">R-CNN 
+framework</a> and provides a significant boost over a randomly-initialized 
+ConvNet, resulting in state-of-the-art performance among algorithms which 
+use only Pascal-provided training set annotations. 
+</p>
+
+<h3>Video</h3>
+<table style="margin: 0 auto"><tr>
+  <td>
+    <iframe width="752" height="423" src="https://www.youtube.com/embed/dUgRR-JFE8s" frameborder="0" allowfullscreen style="margin:10px;"></iframe>
+  </td>
+</tr></table>
+
+<h3>Paper & Presentation</h3>
+<table><tr>
+  <td>
+    <p style="padding-left: 10px;	padding-right: 0px;text-align:right;">
+    <a href="http://arxiv.org/abs/1505.05192"><img style="border:solid 0px #000;margin-top:10px;margin-right:20px;width:350px;" src="images/paper.png"/></a></p>
+    <a href="http://arxiv.org/abs/1505.05192">ICCV paper (pdf)</a> (hosted on arXiv)<br/><br/>
+  </td>
+  <td valign="middle">
+    <p style="text-align:left;margin-top:5px;">
+    </p>
+    <p>
+    <!--<a href="cdoersch_contextprediction.pptx">Example Slides</a> (pptx, 4.4MB)-->
+<a href='http://videolectures.net/iccv2015_doersch_visual_representation/'>
+  <img src='http://videolectures.net/iccv2015_doersch_visual_representation/thumb.jpg' border=0/>
+  <br/>Presented by Carl at ICCV (VideoLectures.net)</a><br/>
+    <a href="slides_website.pptx">ICCV Slides (pptx, 8MB)</a>
+    </p>
+
+<p style="margin-top:10px;">
+
+<p style="text-align:left;"><b>Citation</b><br/><span style="font-size:4px;">&nbsp;<br/></span> Carl Doersch, Abhinav Gupta, and Alexei A. Efros. <b>Unsupervised Visual Representation Learning by Context Prediction.</b> In <i>ICCV 2015</i>.
+   <a href="javascript:togglevis('doersch15')" id="doersch13a">[Show BibTex]</a><br/>
+  </td>
+</table>
+      <table class="bibtex" style="display:none;margin-top:20px;" id="doersch15"><tr><td>
+          <pre>
+@inproceedings{doersch2015unsupervised,
+  title = {Unsupervised Visual Representation Learning by Context Prediction},
+  author = {Doersch, Carl and Gupta, Abhinav and Efros, Alexei A.},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year = {2015}
+}
+          </pre>
+       <!--</div>-->
+       </td></tr></table>
+</p>
+
+<!--<h3 style="clear:both">Video</h3><br/><br/>
+  <iframe width="800" height="450" src="http://www.youtube.com/embed/s5-30NKSwo8?version=3&fs=1&feature=player_embedded&fs=1&hd=1&ap=%2526fmt%3D22" frameborder="1" allowfullscreen></iframe>
+</p>-->
+
+
+
+<h3 style="clear:both">Code and Network</h3>
+<table>
+<tr><td style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Code</b></p></td></tr>
+<tr><td style=""><p style="padding-left: 10px; padding-right: 10px;">is available on <a href="https://github.com/cdoersch/deepcontext">Github</a></p></td></tr>
+<tr><td style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Pre-trained Network</b></p></td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">
+These trained networks can be used to extract fc6 features from 96-by-96 patches.  Note that running it requires a version of Caffe later than August 26, 2015, or the normalization will be computed incorrectly.  Images should be passed in in RGB format after the per-color-channel means have been subtracted, but no other preprocessing is necessary (the pixel range is automatically scaled correctly).  For instructions on using them to extract features for larger images, see the <a href="https://github.com/BVLC/caffe/blob/master/examples/net_surgery.ipynb">net surgery example</a> in the Caffe repository.<br/><br/>
+
+Note that when fine-tuning a model for Pascal VOC (and probably for most datasets), 
+significant performance boosts may be obtained by using our 
+<a href="http://arxiv.org/abs/1511.06856">Magic Init</a> (<a href="https://github.com/philkr/magic_init">code here</a>) 
+to rescale the weights in the following
+networks.  To obtain the results in the paper, I used:
+</p>
+<pre style="margin-left:20px">
+python3 magic_init.py -cs -d '/path/to/VOC2007/JPEGImages/*.jpg' \
+   --gpu 0 --load /path/to/inputmodel.caffemodel \
+   /path/to/groupless_caffenet.prototxt /path/to/outputmodel.caffemodel
+</pre>
+<!--python3 magic_init.py -l /path/to/inputmodel.caffemodel \
+    /path/to/output_model.caffemodel -cs -m groupless_caffenet \
+    -d '/path/to/VOC2007/JPEGImages/*.jpg'-->
+<p style="padding-left: 10px; padding-right: 10px;">
+where groupless_caffenet refers to <a href="nets/groupless_caffenet.prototxt">this modified version</a> of the default CaffeNet model that has groups 
+removed (for the vgg-style model, this becomes <a href="nets/vgg_16_magic_init.prototxt">this vgg-style prototxt</a>).
+You can then do the fine-tuning with fast-rcnn with the caffenet model using <a href="nets/groupless_caffenet_fast_rcnn_train.prototxt">this prototxt</a> for training, <a href="nets/groupless_caffenet_fast_rcnn_solver.prototxt">this solver</a>, and <a href="nets/groupless_caffenet_fast_rcnn_test.prototxt">this prototxt</a> for testing.  You can use <a href="nets/vgg_16_fast_rcnn_train.prototxt">this</a>, <a href="nets/vgg_16_fast_rcnn_solver.prototxt">this</a>, and <a href="nets/vgg_16_fast_rcnn_test.prototxt">this</a>, respectively, for VGG.  For magic_init, start with the .caffemodel's that don't have fc6.  Also, make sure you use fast rcnn's multiscale configuration (in experiments/cfgs/multiscale.yml)
+</p>
+</td></tr>
+<table style="margin-top:20px"><tr><td>
+<p style="padding-left: 10px; padding-right: 10px; text-align:left">Projection Network:</p>
+</td><td>
+<p style="padding-left: 10px; padding-right: 10px;text-align:left">
+<a href="nets/projection.prototxt">[definition prototxt]</a> 
+<a href="nets/projection.caffemodel">[caffemodel_with_fc6]</a> 
+<a href="nets/projection_nofc6_v2.caffemodel">[caffemodel_no_fc6]</a> 
+</p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px; text-align:left">
+Color Dropping Network:
+</p>
+</td><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px; text-align:left">
+<a href="nets/coldrop.prototxt">[definition prototxt]</a> 
+<a href="nets/coldrop.caffemodel">[caffemodel_with_fc6]</a>
+<a href="nets/coldrop_nofc6_v2.caffemodel">[caffemodel_no_fc6]</a>
+</p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px; text-align:left;">
+VGG-Style Network (Color Dropping):
+</p>
+
+</td><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px;text-align:left;">
+<a href="nets/vgg_style.prototxt">[definition prototxt]</a> 
+<a href="nets/vgg_style.caffemodel">[caffemodel_with_fc6]</a> 
+<a href="nets/vgg_style_nofc6.caffemodel">[caffemodel_no_fc6]</a> 
+</p>
+
+</td></tr>
+
+<!--<tr><td style="border-bottom:solid 1px #ccc">Current Release</td></tr>
+<tr><td><p style="padding-left: 10px;	padding-right: 10px;"><a href="paris_sigg_release_v4.5.tar.gz">Version 4.5 tar.gz</a> (1.6 MB; released Jan. 29 2012)</p></tr></td>
+<tr><td style="border-bottom:solid 1px #ccc">Older Releases</td></tr>
+<tr><td><p style="padding-left: 10px;	padding-right: 10px;"><a href="paris_sigg_release.tar.gz">Version 3.0 tar.gz</a> (1.5 MB; released Sept. 13 2012)</p></tr></td>-->
+<!--<tr><td style=""><p style="padding-left: 10px; padding-right: 10px;">This code includes both the full object discovery pipeline as well as a quick demo that lets you visualize the context prediction procedure for verifying a single patch as a member of a cluster.  The quick demo should take less than 5 minutes to set up and run.  Note that the code for this project has been modified from the version used in the paper. The qualitative behavior should be the same, but the output may not be identical to the results in the paper. <br/><br/><a href="https://github.com/cdoersch/contextprediction">Code available on Github</a></p></td></tr>-->
+</table>
+
+
+<h3 style="clear:both">Additional Materials</h3>
+<!--<p style="padding-left: 10px; padding-right: 10px;">Full Results: PASCAL VOC 2011 (Coming Soon!)<br>-->
+<table style="margin-right:40px">
+<tr><td style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Full Results: Visual Data Mining on unlabeled PASCAL VOC 2011</b></p></td></tr>
+<!--<p style="padding-left: 10px; padding-right: 10px;"><b>Full Results: Visual Data Mining on unlabeled PASCAL VOC 2011.</b>  <br/>-->
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">
+This is the expanded version of Figure 7 in the paper.  We have two versions, depending on the method used to avoid chromatic aberration at training time. <b>WARNING:</b> These pages contain about
+10000 patches; don't click the link unless your browser can handle it!<br/>
+<a href="coldrop_nns/patchdisplay.html">[Color Dropping]</a> <a href="projection_nns/patchdisplay.html">[Color Projection]</a>
+</p>
+</td></tr>
+
+<tr><td  style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Nearest Neighbors on PASCAL VOC 2007</b>  <br/></p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">This is the expanded version of Figure 4 in the paper.  We have a separate page for each feature, corresponding to
+the three columns in Figure 4.  
+In each case, the leftmost column shows randomly selected patches that were used as queries; no hand-filtering was done.<br/>
+<a href="nns/ours_random.html">[Our architecture, random initialization]</a> <a href="nns/alexnet.html">[AlexNet (ImageNet Labels)]</a> <a href="nns/ours_colordrop.html">[Ours (ImageNet Unlabeled)]</a>
+</p>
+</td></tr>
+
+<tr><td  style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Maximal Activations of Network Units</b>  <br/></p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">
+We report here the patches that maximally activated the units in our networks.  For each unit, we show a 3-by-3 grid of the top 9 patches.  The units themselves are arranged in no particular order.  We ran the networks on about 2.5M randomly-sampled patches from ImageNet.  Note that most units have a receptive field that does not span the receptive field; hence, we only show the approximate region that is contained within the receptive field.  Regions outside the patch are shown as black.
+</p>
+<table><tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">Projection Network:</p>
+</td><td>
+<p style="padding-left: 10px; padding-right: 10px;">
+<a href="max_activations_projection/layer_norm1.html">[norm1]</a> 
+<a href="max_activations_projection/layer_norm2.html">[norm2]</a> 
+<a href="max_activations_projection/layer_conv3.html">[conv3]</a> 
+<a href="max_activations_projection/layer_conv4.html">[conv4]</a> 
+<a href="max_activations_projection/layer_conv5.html">[conv5]</a> 
+<a href="max_activations_projection/layer_fc6.html">[fc6]</a>
+</p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px;">
+Color Dropping Network:
+</p>
+</td><td>
+<p style="padding-left: 10px; padding-right: 10px;margin-top:10px;">
+<a href="max_activations_coldrop/layer_norm1.html">[norm1]</a> 
+<a href="max_activations_coldrop/layer_norm2.html">[norm2]</a> 
+<a href="max_activations_coldrop/layer_conv3.html">[conv3]</a> 
+<a href="max_activations_coldrop/layer_conv4.html">[conv4]</a> 
+<a href="max_activations_coldrop/layer_conv5.html">[conv5]</a> 
+<a href="max_activations_coldrop/layer_fc6.html">[fc6]</a> 
+</p>
+</td></tr></table>
+</td></tr>
+<tr><td  style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:30px;"><b>Deep Dream</b>  <br/></p>
+</td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">
+Alexander Mordvintsev decided to visualize the contents of our VGG-style network by applying <a href="http://googleresearch.blogspot.com/2015/06/inceptionism-going-deeper-into-neural.html">Deep Dream</a> separately to each filter in our network, and has kindly shared his results with us.  Below are 8 of the filters in conv5_3 (the second-to-last layer before the representations are fused).  Below each is my interpretation.  Mouse over them to see it (I don't want to bias your interpretation!)
+</p>
+<table><tr><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0083.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">eyes</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0123.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">cubes/stairs</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0133.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">left side of dog's face</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0158.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">human face</p></div>
+</td></tr>
+<tr><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0160.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">trees</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0290.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">circles (very useful for predicting relative position!)</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0336.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">paws</p></div>
+</td><td valign="top">
+<img width="198px" src="deepdream/conv5_3_0386.jpg"/>
+<div class="hoverdiv"><p style="color:black;margin-top:2px;">text</p></div>
+</td></tr></table>
+</td></tr>
+
+
+
+
+</table>
+<!--An example of the results obtained entirely automatically, using our unsupervised object discovery algorithm.
+Each row shows the most confident oatcges for one discovered object.  
+Also, see
+<a href="unverified_display/display.html">this page</a>,
+which shows the same clusters but ranks each row by the Exemplar-LDA score rather than our algorithm, to convince
+yourself that our algorithm is helping.
+<b>WARNING:</b> These pages contains about
+6000 patches; don't click the link unless your browser can handle it!  -->
+<!--<li><a href="paris/">Full Results: Paris Elements</a><br>
+An example of the results obtained entirely automatically, using our algorithm to find the unique visual elements
+of Paris.  Compare to our <a href="http://graphics.cs.cmu.edu/projects/whatMakesParis/result/bbhtml.html">previous results</a>
+on the same data.  <b>WARNING:</b> This page contains about
+10000 patches; don't click the link unless your browser can handle it!</li>
+<li style="margin-top:10px;"><a href="indoor67_results/indoor67link/">Visual Elements Learned For Indoor 67</a>
+The elements used for our state-of-the-art Indoor 67 classifier.</li>
+<li style="margin-top:10px;">Heatmaps generated for both confident <a href="easyimages2/">correctly-classified images</a> on Indoor 67 as well as confident <a href="errorimages2/">errors</a>.</li>
+<li style="margin-top:10px;"> Learned element templates and full image feature vectors for indoor67 images (.mat files in .tar.gz): <a href="release_V2.tar.gz">all</a> (3.3GB); <a href="release_minimal_V2.tar.gz">elements only</a> (117MB); <a href="README_V2.txt">README</a> describing archive contents.</li>
+-->
+<h3 style="clear:both">Related Papers</h3>
+<p style="padding-left: 10px; padding-right: 10px;">We first proposed context as supervision in:<br/> C. Doersch, A. Gupta, and A. A. Efros.  <a href="http://graphics.cs.cmu.edu/projects/contextPrediction/">Context as Supervisory Signal:
+Discovering Objects with Predictable Context</a> European Conference on Computer Vision, September 2014.</p>
+<p style="padding-left: 10px; padding-right: 10px;">A paper that helps us fine-tune our model:<br/> P. Kr&auml;henb&uuml;hl, C. Doersch, J. Donahue, and T. Darrell.  <a href="http://arxiv.org/abs/1511.06856">Data-dependent Initializations of Convolutional Neural Networks</a> International Conference on Learning Representations, May 2015.<p>
+<p style="padding-left: 10px; padding-right: 10px;">An extension of this paper, which trains deep nets with jigsaw puzzles: <br/> M. Noroozi and P. Favaro.  <a href="http://arxiv.org/abs/1603.09246">Unsupervised Learning of Visual Representations by Solving Jigsaw Puzzles</a> arXiv:1603.09246, March 2016.<p>
+<table>
+<tr><td style="border-bottom:solid 1px #ccc">
+<p style="padding-left: 10px; padding-right: 10px; margin-top:10px;"><b>Other works on &ldquo;Self-Supervised&rdquo; Learning</b></p></td></tr>
+<tr><td>
+<p style="padding-left: 10px; padding-right: 10px;">P. Isola, D. Zoran, D. Krishnan and E. Adelson  <a href="http://arxiv.org/abs/1511.06811">Learning visual groups from co-occurrences in space and time</a> arXiv:1511.06811, November 2015<p>
+<p style="padding-left: 10px; padding-right: 10px;">P. Agrawal, J. Carreira and J. Malik <a href="http://www.cs.berkeley.edu/~pulkitag/lsm/lsm.html">Learning to See by Moving</a> ICCV 2015<p>
+<p style="padding-left: 10px; padding-right: 10px;">D. Jayaraman and K. Grauman <a href="http://arxiv.org/abs/1505.02206">Learning image representations tied to ego-motion</a> ICCV 2015<p>
+<p style="padding-left: 10px; padding-right: 10px;">X. Wang and A. Gupta  <a href="http://www.cs.cmu.edu/~xiaolonw/unsupervise.html">Unsupervised Learning of Visual Representations using Videos</a> ICCV 2015<p>
+</td></tr></table>
+
+
+
+<h3 style="clear:both">Funding</h3>
+<p style="padding-left: 10px; padding-right: 10px;">
+This research partially was supported by:
+<ul>
+<li>Google Graduate Fellowship to Carl Doersch</li>
+<li>ONR MURI N000141010934</li>
+<li>Intel research grant</li>
+<li>NVidia hardware grant</li>
+<li>Amazon Web Services grant</li>
+</ul>
+</p>
+<p style="padding-left: 10px; padding-right: 10px;">
+Comments, questions to <a href="http://www.cs.cmu.edu/~cdoersch/"  target="_blank">Carl Doersch</a></p>
+</div>
+
+
+
+</body>
+</html>
