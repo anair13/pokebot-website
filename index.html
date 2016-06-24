@@ -54,6 +54,13 @@
     }
   }
 </script>
+<script type="text/javascript"
+  src="http://www.maths.nottingham.ac.uk/personal/drw/LaTeXMathML.js">
+</script>
+<!--
+<script type="text/javascript" src="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.js"></script>
+<link rel="stylesheet" type="text/css" href="http://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css" />
+-->
 </head> 
 <body> 
 <div id="primarycontent">
@@ -61,7 +68,7 @@
 
 <center>
 <ul id="people" itemprop="accountablePerson">
-	<li><h4><a href="http://people.eecs.berkeley.edu/~pulkitag">Pulkit Agrawal*</a>, <a href="">Ashvin Nair*</a>, <a href="http://people.eecs.berkeley.edu/~pabbeel">Pieter Abbeel</a>, 
+	<li><h4><a href="http://people.eecs.berkeley.edu/~pulkitag">Pulkit Agrawal*</a>, <a href="https://github.com/anair13">Ashvin Nair*</a>, <a href="http://people.eecs.berkeley.edu/~pabbeel">Pieter Abbeel</a>, 
 		<a href="http://people.eecs.berkeley.edu/~malik">Jitendra Malik</a>, <a href="http://homes.cs.washington.edu/~svlevine/">Sergey Levine</a></h4></li>
 <li>*Equal Contribution</li>
 </ul>
@@ -89,17 +96,31 @@ modeling approach outperforms alternative methods. We also demonstrate that
 active data collection using the learned model further improves performance.
 </p>
 
-<h3>Video</h3>
+<h3>Data Collection</h3>
+<table style="margin: 0 auto">
+  <tr>
+  <p style="padding-left: 10px; padding-right: 10px;">
+   The robot collects the data by randomly poking objects. It is equipped with a Kinect camera, a gripper for poking, and a white rod for resetting the objects to the center of the workspace. The point cloud from the Kinect is used to randomly select one target point for poking. The Kinect point cloud is used only during the training to bias the robot to poke an object instead of poking in free space. The robot pokes objects by moving the finger along the XZ plane at a fixed height from the table. The X and Y axis represent the horizontal and vertical axes, while the Z axis points away from the robot. After selecting a random point to poke ($p$) on the object, the robot randomly samples a poke direction ($\theta$) and length ($l$). Kinematically, the poke is defined by points $p_1, p_2$ that are l/2 distance from $p$ in the directions $\theta$, $(180 + \theta)$ respectively. The robot executes the poke by moving it's finger from $p_1$ to $p_2$. 
+  </p>
+
+  <p style="padding-left: 10px; padding-right: 10px;">
+  Some sample clips showing the data collection process can be seen in the following video. 
+  </p>
+    <td>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/4n6fRCvRDlg" frameborder="0" allowfullscreen></iframe> 
+    </td>
+  </tr>
+</table>
+<h3>Modelling the effect of pokes is not easy</h3>
+  <p style="padding-left: 10px; padding-right: 10px;">
+  Modelling the effect of pokes on real world objects is not easy. The complex geometry and material properties of objects often leads to 
+  unexpected motion as shown in the following video clip. 
+  </p>
 <table style="margin: 0 auto">
   <tr>
     <td>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Za2Jm4WL2cM" frameborder="0" allowfullscreen></iframe>
-      <!-- <iframe width="752" height="423" src="https://www.youtube.com/embed/dUgRR-JFE8s" frameborder="0" allowfullscreen style="margin:10px;"></iframe> -->
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8SGE1gGi4u8" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/z2a4uMhRsa4" frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8SGE1gGi4u8" frameborder="0" allowfullscreen></iframe> -->
     </td>
   </tr>
 </table>
@@ -127,8 +148,9 @@ To be released soon.
 
 <h3 style="clear:both">Acknowlegements</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
-First and foremost, we thank Alyosha Efros for inspiration and fruitful discussions throughout this work. The title of this paper has been partly influenced by the term ``pokebot" that Alyosha has been using for several years. We would like to thank Ruzena Bajcsy for access to the Baxter robot and Shubham Tulsiani for helpful comments. This work was supported in part by ONR MURI N00014-14-1-0671 and ONR YIP. Sergey Levine was partially supported by ARL, through the MAST program.  We gratefully acknowledge NVIDIA  corporation for the donation of
+First and foremost, we thank <a href='http://people.eecs.berkeley.edu/~efros/'>Alyosha Efros</a> for inspiration and fruitful discussions throughout this work. The title of this paper has been partly influenced by the term ``pokebot" that Alyosha has been using for several years. We would like to thank Ruzena Bajcsy for access to the Baxter robot and Shubham Tulsiani for helpful comments. This work was supported in part by ONR MURI N00014-14-1-0671 and ONR YIP. Sergey Levine was partially supported by ARL, through the MAST program.  We gratefully acknowledge NVIDIA  corporation for the donation of
 K40 GPUs and access to the NVIDIA PSG cluster for this research.
+
 The template for this website has been adopted from Carl Doersch. 
 <p style="padding-left: 10px; padding-right: 10px;">
 Comments, questions to <a href="http://www.cs.berkeley.edu/~pulkitag"  target="_blank">Pulkit Agrawal</a></p>
