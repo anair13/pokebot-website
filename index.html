@@ -130,6 +130,24 @@ active data collection using the learned model further improves performance.
     Preprint of the paper is available at: <a href='http://arxiv.org/abs/1606.07419'>[pdf]</a>
   </p> 
 
+
+<h3>Our Model: Moving away from predicting pixels</h3>
+  <table style="margin: 0 auto">
+    <tr><td>
+    <img src="img/network.png" itemprop="image" alt="result">
+    </td></tr>
+  </table>
+
+  <p style="padding-left: 10px; padding-right: 10px;">
+ We model the dynamics of robot’s interactions directly from images, by jointly estimating
+forward and inverse models of dynamics. The inverse model objective provides
+supervision to construct informative visual features, which the forward model can
+then predict and in turn regularize the feature space for the inverse model. The
+interplay between these two objectives creates useful, accurate models that can
+then be used for multi-step decision making. This formulation has the benefit that it is possible to learn forward models in an abstract feature space and
+thus alleviate the need of predicting pixels.   
+  </p> 
+
 <h3>Supplemental Materials</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
    The robot is tasked with displacing the object from initial to target configuration. Using the multistep decision making proposed in the paper, the final result of the pokes
