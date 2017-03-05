@@ -1,8 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="StyleSheet" href="style.css" type="text/css" media="all" /> 
+<link rel="StyleSheet" href="style.css" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Learning to Poke by Poking</title> 
+<title>Learning to Poke by Poking</title>
 <style type="text/css">
 #primarycontent h1 {
   font-variant: small-caps;
@@ -73,14 +73,14 @@
 
 </script>
 
-</head> 
-<body> 
+</head>
+<body>
 <div id="primarycontent">
 <h1 align="center" itemprop="name"><strong>Learning To Poke by Poking:<br />Experiential Learning of Intuitive Physics</strong></h1>
 
 <center>
 <ul id="people" itemprop="accountablePerson">
-	<li><h4><a href="http://people.eecs.berkeley.edu/~pulkitag">Pulkit Agrawal*</a>, <a href="https://github.com/anair13">Ashvin Nair*</a>, <a href="http://people.eecs.berkeley.edu/~pabbeel">Pieter Abbeel</a>, 
+	<li><h4><a href="http://people.eecs.berkeley.edu/~pulkitag">Pulkit Agrawal*</a>, <a href="https://github.com/anair13">Ashvin Nair*</a>, <a href="http://people.eecs.berkeley.edu/~pabbeel">Pieter Abbeel</a>,
 		<a href="http://people.eecs.berkeley.edu/~malik">Jitendra Malik</a>, <a href="http://homes.cs.washington.edu/~svlevine/">Sergey Levine</a></h4></li>
 <li>*Equal Contribution</li>
 </ul>
@@ -112,21 +112,21 @@ active data collection using the learned model further improves performance.
 <table style="margin: 0 auto">
   <tr>
   <p style="padding-left: 10px; padding-right: 10px;">
-   The robot collects the data by randomly poking objects. It is equipped with a Kinect camera, a gripper for poking, and a white rod for resetting the objects to the center of the workspace. The point cloud from the Kinect is used to randomly select one target point for poking. The Kinect point cloud is used only during the training to bias the robot to poke an object instead of poking in free space. The robot pokes objects by moving the finger along the XZ plane at a fixed height from the table. The X and Y axis represent the horizontal and vertical axes, while the Z axis points away from the robot. After selecting a random point to poke ($p$) on the object, the robot randomly samples a poke direction ($\theta$) and length ($l$). Kinematically, the poke is defined by points $p_1, p_2$ that are l/2 distance from $p$ in the directions $\theta$, $(180 + \theta)$ respectively. The robot executes the poke by moving it's finger from $p_1$ to $p_2$. 
+   The robot collects the data by randomly poking objects. It is equipped with a Kinect camera, a gripper for poking, and a white rod for resetting the objects to the center of the workspace. The point cloud from the Kinect is used to randomly select one target point for poking. The Kinect point cloud is used only during the training to bias the robot to poke an object instead of poking in free space. The robot pokes objects by moving the finger along the XZ plane at a fixed height from the table. The X and Y axis represent the horizontal and vertical axes, while the Z axis points away from the robot. After selecting a random point to poke ($p$) on the object, the robot randomly samples a poke direction ($\theta$) and length ($l$). Kinematically, the poke is defined by points $p_1, p_2$ that are l/2 distance from $p$ in the directions $\theta$, $(180 + \theta)$ respectively. The robot executes the poke by moving it's finger from $p_1$ to $p_2$.
   </p>
 
   <p style="padding-left: 10px; padding-right: 10px;">
-  Some sample clips showing the data collection process can be seen in the following video. 
+  Some sample clips showing the data collection process can be seen in the following video.
   </p>
     <td>
-     <iframe width="640" height="360" src="https://www.youtube.com/embed/4n6fRCvRDlg" frameborder="0" allowfullscreen></iframe> 
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/4n6fRCvRDlg" frameborder="0" allowfullscreen></iframe>
     </td>
   </tr>
 </table>
 <h3>Modelling the effect of pokes is not easy</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
-  Modelling the effect of pokes on real world objects is not easy. The complex geometry and material properties of objects often leads to 
-  unexpected motion as shown in the following video clip. 
+  Modelling the effect of pokes on real world objects is not easy. The complex geometry and material properties of objects often leads to
+  unexpected motion as shown in the following video clip.
   </p>
 <table style="margin: 0 auto">
   <tr>
@@ -140,7 +140,7 @@ active data collection using the learned model further improves performance.
 <h3>Paper</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
     Preprint of the paper is available at: <a href='http://arxiv.org/abs/1606.07419'>[pdf]</a>
-  </p> 
+  </p>
 
 
 <h3>Our Model: Moving away from predicting pixels</h3>
@@ -157,23 +157,28 @@ supervision to construct informative visual features, which the forward model ca
 then predict and in turn regularize the feature space for the inverse model. The
 interplay between these two objectives creates useful, accurate models that can
 then be used for multi-step decision making. This formulation has the benefit that it is possible to learn forward models in an abstract feature space and
-thus alleviate the need of predicting pixels.   
-  </p> 
+thus alleviate the need of predicting pixels.
+  </p>
 
 <h3>Supplemental Materials</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
    The robot is tasked with displacing the object from initial to target configuration. Using the multistep decision making proposed in the paper, the final result of the pokes
-   is shown as the final state in the image below.  
-  </p> 
+   is shown as the final state in the image below.
+  </p>
 <img src="img/sequence-no-arrow.png" itemprop="image" alt="result">
 
   <p style="padding-left: 10px; padding-right: 10px;">
    Additional supplemental materials detailing the simulation experiments will be released soon.
-  </p> 
+  </p>
+
+<h3 style="clear:both">Data</h3>
+  <p style="padding-left: 10px; padding-right: 10px;">
+    Our data is released publicly <a href="https://drive.google.com/file/d/0B3xZefNMOTwuTUwtU0ZnaDhGVUE/view?usp=sharing">here</a>. An explanation of the format and instructions for using it are included as an iPython notebook.
+</p>
 
 <h3 style="clear:both">Code and Models</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
-To be released soon. 
+To be released soon.
 </p>
 
 <h3 style="clear:both">Big Data in Robotics</h3>
@@ -209,7 +214,7 @@ K40 GPUs and access to the NVIDIA PSG cluster for this research.
 
 <h3 style="clear:both">Website Template</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
-The template for this website has been adopted from Carl Doersch. 
+The template for this website has been adopted from Carl Doersch.
 </p>
 
 <h3 style="clear:both">Contact</h3>
