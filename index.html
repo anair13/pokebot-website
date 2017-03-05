@@ -108,6 +108,11 @@ modeling approach outperforms alternative methods. We also demonstrate that
 active data collection using the learned model further improves performance.
 </p>
 
+<h3>Paper</h3>
+  <p style="padding-left: 10px; padding-right: 10px;">
+    Preprint of the paper is available at: <a href='http://arxiv.org/abs/1606.07419'>[pdf]</a>
+  </p>
+
 <h3>Data Collection</h3>
 <table style="margin: 0 auto">
   <tr>
@@ -123,25 +128,18 @@ active data collection using the learned model further improves performance.
     </td>
   </tr>
 </table>
-<h3>Modelling the effect of pokes is not easy</h3>
+<h3>Unexpected Poking Dynamics</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
-  Modelling the effect of pokes on real world objects is not easy. The complex geometry and material properties of objects often leads to
-  unexpected motion as shown in the following video clip.
+  Modelling the effect of pokes on real world objects is not easy. The complex geometry and material properties of objects often leads to unexpected motion as shown in the following video clip.
   </p>
 <table style="margin: 0 auto">
   <tr>
     <td>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/z2a4uMhRsa4" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/Q7tj8i6O-Is" frameborder="0" allowfullscreen></iframe>
       <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/8SGE1gGi4u8" frameborder="0" allowfullscreen></iframe> -->
     </td>
   </tr>
 </table>
-
-<h3>Paper</h3>
-  <p style="padding-left: 10px; padding-right: 10px;">
-    Preprint of the paper is available at: <a href='http://arxiv.org/abs/1606.07419'>[pdf]</a>
-  </p>
-
 
 <h3>Our Model: Moving away from predicting pixels</h3>
   <table style="margin: 0 auto">
@@ -159,6 +157,54 @@ interplay between these two objectives creates useful, accurate models that can
 then be used for multi-step decision making. This formulation has the benefit that it is possible to learn forward models in an abstract feature space and
 thus alleviate the need of predicting pixels.
   </p>
+
+<h3>Model Performance</h3>
+<table style="margin: 0 auto">
+  <tr>
+    <td>
+  <p style="padding: 10px;">
+   Our method is shown below, being used to poke objects into a target configuration.
+  </p>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/B-6VVWBp7gQ" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+  <p style="padding: 10px;">
+   The model is trained on only image pairs that contain images one action away from each other. However, it is able to succesfully use the model to move objects farther away.
+  </p>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/cAYcVbBByMQ" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+  <p style="padding: 10px;">
+   The actions we execute are essentially greedy and there is no long term planning. Therefore, when presented with the situation below, the model does not try to move around the obstructing object.
+  </p>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/_LiFAZo6bZI" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+  <p style="padding: 10px;">
+   The model is able to succesfully act on objects not included in its training set.
+  </p>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/zUReXbuR_Q0" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+  <p style="padding: 10px;">
+   Every training pair the model sees is the result of one action, so multiple objects in different parts of the scene cannot move together. When faced with multiple objects to move to reach the target, the model sometimes succeeds but often gets stuck.
+  </p>
+     <iframe width="640" height="360" src="https://www.youtube.com/embed/5j5ZT_tqsJg" frameborder="0" allowfullscreen></iframe>
+    </td>
+  </tr>
+</table>
 
 <h3>Supplemental Materials</h3>
   <p style="padding-left: 10px; padding-right: 10px;">
