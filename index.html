@@ -117,6 +117,11 @@ active data collection using the learned model further improves performance.
     Preprint of the paper is available at: <a href='http://arxiv.org/abs/1606.07419'>[pdf]</a>
   </p>
 
+<h3 style="clear:both">Data</h3>
+  <p style="padding-left: 10px; padding-right: 10px;">
+    Our data is released publicly <a href="https://drive.google.com/file/d/0B3xZefNMOTwuTUwtU0ZnaDhGVUE/view?usp=sharing">here</a>. An explanation of the format and instructions for using it are included as an iPython notebook.
+</p>
+
 <h3>Data Collection</h3>
 <table style="margin: 0 auto">
   <tr>
@@ -158,8 +163,7 @@ forward and inverse models of dynamics. The inverse model objective provides
 supervision to construct informative visual features, which the forward model can
 then predict and in turn regularize the feature space for the inverse model. The
 interplay between these two objectives creates useful, accurate models that can
-then be used for multi-step decision making. This formulation has the benefit that it is possible to learn forward models in an abstract feature space and
-thus alleviate the need of predicting pixels.
+then be used for multi-step decision making. This formulation has the benefit that it is possible to learn forward models in an abstract feature space and thus alleviate the need of predicting pixels.
   </p>
 
 <h3>Model Performance</h3>
@@ -167,32 +171,10 @@ thus alleviate the need of predicting pixels.
   <tr>
     <td>
       <p style="padding: 10px;">
-       Our method is shown below, being used to poke objects into a target configuration.
+       Our method is shown below, being used to poke objects into a target configuration. The model is trained on only image pairs that contain images one action away from each other. However, it is able to succesfully use the model to move objects farther away.
       </p>
       <center>
       <iframe width="640" height="360" src="https://www.youtube.com/embed/B-6VVWBp7gQ" frameborder="0" allowfullscreen></iframe>
-      </center>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <p style="padding: 10px;">
-       The model is trained on only image pairs that contain images one action away from each other. However, it is able to succesfully use the model to move objects farther away.
-      </p>
-      <center>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/cAYcVbBByMQ" frameborder="0" allowfullscreen></iframe>
-      </center>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <p style="padding: 10px;">
-       The actions we execute are essentially greedy and there is no long term planning. Therefore, when presented with the situation below, the model does not try to move around the obstructing object.
-      </p>
-      <center>
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/_LiFAZo6bZI" frameborder="0" allowfullscreen></iframe>
       </center>
     </td>
   </tr>
@@ -204,6 +186,17 @@ thus alleviate the need of predicting pixels.
       </p>
       <center>
       <iframe width="640" height="360" src="https://www.youtube.com/embed/zUReXbuR_Q0" frameborder="0" allowfullscreen></iframe>
+      </center>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p style="padding: 10px;">
+       The actions we execute are essentially greedy and there is no long term planning. Therefore, when presented with the situation below, the model does not try to move around the obstructing object.
+      </p>
+      <center>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/_LiFAZo6bZI" frameborder="0" allowfullscreen></iframe>
       </center>
     </td>
   </tr>
@@ -231,14 +224,15 @@ thus alleviate the need of predicting pixels.
    Additional supplemental materials detailing the simulation experiments will be released soon.
   </p>
 
-<h3 style="clear:both">Data</h3>
-  <p style="padding-left: 10px; padding-right: 10px;">
-    Our data is released publicly <a href="https://drive.google.com/file/d/0B3xZefNMOTwuTUwtU0ZnaDhGVUE/view?usp=sharing">here</a>. An explanation of the format and instructions for using it are included as an iPython notebook.
-</p>
-
 <h3 style="clear:both">Code and Models</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
 To be released soon.
+</p>
+
+<h3 style="clear:both">Presentation</h3>
+<p style="padding-left: 10px; padding-right: 10px;">
+This work was an oral presentation at NIPS 2016. <a href="https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Learning-to-Poke-by-Poking-Experiential-Learning-of-Intuitive-Physics
+">This link</a> contains a recording of the presentation.
 </p>
 
 <h3 style="clear:both">Big Data in Robotics</h3>
